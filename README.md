@@ -1,4 +1,3 @@
-
 # Portable FreeBSD `geli`
 This is a portable version of FreeBSD [geli(8)](https://www.freebsd.org/cgi/man.cgi?geli) for GNU/Linux.
 
@@ -48,7 +47,7 @@ geli help
 ```
 
 ## Description
-The first argument to geli	indicates an action to be performed:
+The first argument to geli indicates an action to be performed:
 
 ### init
 Initialize providers which need to be encrypted.
@@ -106,7 +105,7 @@ Additional options include:
 geli attach [-vd] [-j passfile] prov nbd
 
 - `-d`
-If	specified, `geli` daemon will be detached automatically on success and continue running on background.
+If specified, `geli` daemon will be detached automatically on success and continue running on background.
 
 - `-j passfile`
 Specifies a file which contains the passphrase component of the User Key (or part of it). Formore information see the description of the
@@ -118,7 +117,7 @@ Enables the verbose mode.
 ### setkey
 Install a copy of the Master Key into the selected slot, encrypted with a new User Key.
 If the selected slot is populated, replace the existing copy.
-A provider has one Master Key, which can be stored in one or both slots, each encrypted with an	independent User Key.
+A provider has one Master Key, which can be stored in one or both slots, each encrypted with an independent User Key.
 With the [init](#init) subcommand, only key number 0 is  initialized.
 The User Key can be changed at any time: for an attached provider, for a detached provider, or on the backup file.
 
@@ -132,7 +131,7 @@ If 0 is given, PKCS#5v2 will not be used.
 Specifies a file which contains the passphrase component of a current User Key.
 
 - `-J newpassfile`
-Specifies a file which contains	the passphrase component of the new User Key.
+Specifies a file which contains the passphrase component of the new User Key.
 
 - `-n keyno`
 Specifies the index number of the Master Key copy to change (could be 0 or 1).
@@ -149,7 +148,7 @@ Additional options include:
 Enables the verbose mode.
 
 ### restore
-Restore metadata from the given	file to	the given provider.
+Restore metadata from the given file to the given provider.
 
 Additional options include:
 
@@ -163,7 +162,7 @@ The old metadata block is relocated to the correct position at the end of the pr
 Additional options include:
 
 - `-s oldsize`
-The	size of	the provider before it was resized.
+The size of the provider before it was resized.
 
 - `-v`
 Enables the verbose mode.
