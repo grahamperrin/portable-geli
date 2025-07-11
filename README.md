@@ -54,8 +54,8 @@ Initialize providers which need to be encrypted.
 Multiple providers are not supported.
 A unique salt will be randomly generated for provider to ensure the Master Key for is unique.
 Here you can set up the cryptographic algorithm to use, Data Key length, etc.
-The last sector of the providers is used to store metadata.
-that the metadata can be recovered with the restore subcommand using the backupfile and backup action described below.
+The last sector of the provider is used to store metadata.
+Metadata can be recovered with the restore subcommand using the backupfile and backup action described below.
 
 Additional options include:
 
@@ -84,8 +84,7 @@ This option is mandatory.
 - `-J newpassfile`
 Specifies a file which contains the passphrase component of the User Key (or part of it).
 If newpassfile is given as -, standard input will be used.
-Only the first line (excluding new-line character) is taken from the given file.
-otherwise the environment variable of `passphrase` will be used.
+Only the first line (excluding new-line character) is taken from the given file, otherwise the environment variable of `passphrase` will be used.
 
 - `-l keylen`
 Data Key length to use with the given crypto graphic algorithm.
